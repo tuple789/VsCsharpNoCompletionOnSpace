@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SerializableSnippets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <commands />
+  <extensions>
+    <Snippet>
+      <id>1</id>
+      <name>Disable Space Completion</name>
+      <code>public class E : VisualCommanderExt.IExtension
+{
+	public void SetSite(EnvDTE80.DTE2 DTE_, Microsoft.VisualStudio.Shell.Package package)
+{
+	DTE = DTE_;
+	timer = new System.Windows.Threading.DispatcherTimer();
+	timer.Interval = System.TimeSpan.FromMilliseconds(1000);
+	timer.Tick += OnTimer;
+	timer.Start();
+}
+public void Close()
+{
+	timer.Stop();
+}
+private void OnTimer(System.Object o, System.EventArgs a)
+{
+	try
+	{
+		if(!isToggleCompletionBtnPressed){
+			ToggleCompletion();
+			isToggleCompletionBtnPressed = true;
+		}
+		
+	}
+	catch (System.Exception e)
+	{
+	}
+}
+private void ToggleCompletion()
+{
+	DTE.ExecuteCommand("Edit.ToggleCompletionMode");
+}	
+
+	private EnvDTE80.DTE2 DTE;
+	private System.Windows.Threading.DispatcherTimer timer;
+	private bool isToggleCompletionBtnPressed = false;
+}</code>
+      <referencedAssemblies>
+        <string>System.Xaml</string>
+      </referencedAssemblies>
+      <type>Extension</type>
+      <lang>CS</lang>
+      <langVersion>v4.0</langVersion>
+      <enabled>true</enabled>
+      <includeDebugInformation>false</includeDebugInformation>
+    </Snippet>
+  </extensions>
+  <commonCode />
+</SerializableSnippets>
