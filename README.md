@@ -1,8 +1,8 @@
 # VsCsharpNoCompletionOnSpace
 
-Normally, The toggle the completion mode in Visual Studio for C# automatically get set to complete when you press space. You can of course 
-press the toggle buttons to cancel that behaviour, however you have to do it EVERYTIME you launch a new instance of visual Studio, as there
-is no way to save that behaviour.
+The toggle the completion mode in Visual Studio for C# is automatically set to "complete when you press space". You can of course 
+press the toggle buttons to disable that behaviour, however you have to do it EVERYTIME you launch visual Studio, as there
+is no way to "save" that behaviour.
 This extension for Visual Commander makes sure you will never have to press that button again.
 
 ## Install:
