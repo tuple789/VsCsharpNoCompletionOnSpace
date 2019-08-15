@@ -12,7 +12,7 @@ This extension makes sure you will never have to press that button again.
 - First install the Visual Commander extension:
 https://marketplace.visualstudio.com/items?itemName=SergeyVlasov.VisualCommander
 
-- Download DisableSpaceCompletion.vcmd
+- Download this repository (Clone or Download button) and extract DisableSpaceCompletion.vcmd from the .zip
 
 - Install DisableSpaceCompletion.vcmd by going in Visual Studio:
   - Vcmd menu -> Import -> choose DisableSpaceCompletion.vcmd
